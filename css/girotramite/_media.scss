@@ -1,0 +1,16 @@
+
+@media screen and (max-width:800px){
+    body{
+
+        .contenedor{
+            height: 350px;
+
+            .botones{
+                margin-top: 100px;
+                a{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

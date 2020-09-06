@@ -1,0 +1,152 @@
+body {
+  background: #dad9d9;
+  font-weight: bolder; }
+  body .contenedor {
+    display: flex;
+    margin: 50px auto;
+    width: 60%;
+    height: auto;
+    background: white;
+    border-radius: 15px;
+    -webkit-box-shadow: -12px 14px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -12px 14px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -12px 14px 5px 0px rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 50px; }
+    body .contenedor .contImg {
+      width: 88%;
+      height: 1020px; }
+      body .contenedor .contImg input {
+        width: 95%;
+        height: auto;
+        margin: 0;
+        border: none; }
+      body .contenedor .contImg .input1 {
+        height: 27px;
+        border: 1px solid black; }
+      body .contenedor .contImg img {
+        position: absolute;
+        width: 700px;
+        height: 1000px;
+        border: 1px solid black;
+        z-index: 1;
+        left: 320px;
+        top: 78px; }
+      body .contenedor .contImg .uno {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        padding: 0px;
+        width: 105px;
+        height: 148px;
+        top: 139px;
+        bottom: 0px;
+        left: 834px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .dos {
+        display: flex;
+        position: absolute;
+        width: 210px;
+        height: 18px;
+        top: 502px;
+        bottom: 0px;
+        left: 400px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .tres {
+        display: flex;
+        position: absolute;
+        width: 290px;
+        height: 18px;
+        top: 526px;
+        bottom: 0px;
+        left: 440px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .cuatro {
+        display: flex;
+        position: absolute;
+        width: 290px;
+        height: 18px;
+        top: 550px;
+        bottom: 0px;
+        left: 420px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .cinco {
+        display: flex;
+        position: absolute;
+        width: 155px;
+        height: 18px;
+        top: 550px;
+        bottom: 0px;
+        left: 780px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .seis {
+        display: flex;
+        position: absolute;
+        width: 380px;
+        height: 18px;
+        top: 574px;
+        bottom: 0px;
+        left: 555px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .siete {
+        display: flex;
+        position: absolute;
+        width: 40px;
+        height: 18px;
+        top: 598px;
+        bottom: 0px;
+        left: 520px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .ocho {
+        display: flex;
+        position: absolute;
+        width: 320px;
+        height: 18px;
+        top: 702px;
+        bottom: 0px;
+        left: 425px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .nueve {
+        display: flex;
+        position: absolute;
+        width: 110px;
+        height: 18px;
+        top: 764px;
+        bottom: 0px;
+        left: 455px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .diez {
+        display: flex;
+        position: absolute;
+        width: 520px;
+        height: 18px;
+        top: 828px;
+        bottom: 0px;
+        left: 402px;
+        right: 0px;
+        z-index: 2; }
+      body .contenedor .contImg .once {
+        display: flex;
+        position: absolute;
+        width: 410px;
+        height: 18px;
+        top: 860px;
+        bottom: 0px;
+        left: 515px;
+        right: 0px;
+        z-index: 2; }
+
+/*# sourceMappingURL=estilos.css.map */

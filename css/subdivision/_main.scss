@@ -1,0 +1,258 @@
+
+.main{
+
+    .seleccionado{
+                background: rgb(204, 198, 186);
+                background: -moz-linear-gradient(top, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(186,204,195,1)), color-stop(67%, rgba(237,237,237,1)), color-stop(100%, rgba(255,255,255,1)));
+                background: -webkit-linear-gradient(top, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+                background: -o-linear-gradient(top, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+                background: -ms-linear-gradient(top, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+                background: linear-gradient(to bottom, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+    }
+
+    .costos{
+        .contenedor{
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            margin-top: 30px;
+            border-radius: 15px;
+            -webkit-box-shadow: -3px 9px 15px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: -3px 9px 15px 0px rgba(0,0,0,0.75);
+            box-shadow: -3px 9px 15px 0px rgba(0,0,0,0.75);
+            margin-bottom: 20px;
+
+            .titulo{
+                font-size: 30px;
+                text-align: center;
+                color: rgb(29, 29, 29);
+                padding: 30px;
+                border-bottom: 5px solid rgb(218, 217, 217) ;
+            }
+
+            .datos{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 30px;
+                color: rgba($color: #000000, $alpha: .20);
+
+                label{
+                    font-weight: bolder;
+                    padding: 7px;
+                }
+                input{
+                    width: 70%;
+                    padding: 7px;
+                    text-align: center;
+                    border-radius: 5px;
+                    border: 2px solid rgba(0, 0, 0, 0.10);
+                    color: rgba(0, 0, 0, 0.30);
+                }
+                .contenedor2{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                }
+                .datos1{
+                    display: block;
+                    width: 50%;
+                    padding: 10px;
+
+                }
+                .datos2{
+                    display: block;
+                    width: 50%;
+                    padding: 10px;
+                }
+                
+            }
+
+            .contenedorTabla{
+                padding: 20px;
+                
+                input[type="button"]{
+                    background: url(../../img/boton.jpg);
+                    width: 20px;
+                    background-size: cover;
+                    border: none;
+                    height: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        -webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+                        -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+                        box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+                        transform: translate(1px);
+                    }                 
+                }
+
+                .tabla{
+                    margin: auto;
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    margin-bottom: 30px;
+
+                    tr{
+                        &:hover{
+                            background: rgba(186,204,195,1);
+                            background: -moz-linear-gradient(top, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+                            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(186,204,195,1)), color-stop(67%, rgba(237,237,237,1)), color-stop(100%, rgba(255,255,255,1)));
+                            background: -webkit-linear-gradient(top, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+                            background: -o-linear-gradient(top, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+                            background: -ms-linear-gradient(top, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+                            background: linear-gradient(to bottom, rgba(186,204,195,1) 0%, rgba(237,237,237,1) 67%, rgba(255,255,255,1) 100%);
+                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#baccc3', endColorstr='#ffffff', GradientType=0 );                        
+                        }
+                    }
+
+                    td{
+                        border: 1px solid black;
+                        padding: 7px;
+                        text-align: center;
+                    }
+                    th{
+                        border: 1px solid black;
+                        padding: 7px;
+                        text-align: center;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .datosGenerales{
+        margin-bottom: 40px;
+        display: none;
+
+        input{
+            width: 87%;
+            padding: 7px;
+            text-align: right;
+            border: 2px solid black;
+            border-radius: 5px;
+            &:focus{
+                -webkit-box-shadow: 0px 0px 4px 3px rgb(58, 119, 250);
+                -moz-box-shadow: 0px 0px 4px 3px rgb(58, 119, 250);
+                box-shadow: 0px 0px 4px 3x rgb(58, 119, 250);
+            }
+
+        }
+
+        label{
+            font-weight: bolder;
+        }
+
+        .ccatastral{
+            border: 2px solid rgba(0, 0, 0, 0.10);
+            color: rgba(0, 0, 0, 0.30);    
+            border-radius: 5px;
+         }
+         .lbccatastral{
+            color: rgba(0, 0, 0, 0.30);    
+         }
+
+        .titulo{
+            font-size: 30px;
+            text-align: center;
+            color: rgb(29, 29, 29);
+            padding: 30px;
+            border-bottom: 5px solid rgba(29, 29, 29, 0.719) ;     
+        }
+        .contenedor{
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;     
+            margin-top: 20px;
+
+            .contenedorDatos{
+                width: 70%;
+                display: grid;
+                grid-template-columns:300px 1fr;
+                margin-top: 40px;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+            
+                div{
+                    padding: 7px 20px;
+                    #sector{
+                        margin-left: 243px;
+                    }
+                }
+            }
+        }
+    }
+
+    .docRequerida{
+
+        .contenedor{
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            -webkit-box-shadow: -3px 9px 15px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: -3px 9px 15px 0px rgba(0,0,0,0.75);
+            box-shadow: -3px 9px 15px 0px rgba(0,0,0,0.75);
+
+            .titulo{
+                font-size: 30px;
+                text-align: center;
+                color: rgb(29, 29, 29);
+                padding: 30px;
+                border-bottom: 5px solid rgb(218, 217, 217) ;     
+            }
+            .subTitulo{
+                padding: 60px;
+            }
+
+            .docMain{
+                width: 80%;
+                height: 200px;
+                border: 3px solid rgba(46, 45, 45, 0.849);
+                overflow: scroll;
+                margin: auto;
+                padding: 30px;
+            }
+
+            .footer{
+                p{
+                    text-align: center;
+                    padding: 50px;
+                }
+                .botones{
+                    text-align: center;
+                    button{
+                        padding: 10px 30px;
+                        cursor: pointer;
+                        background: rgba(128, 128, 248, 0.829);
+                        border-radius: 5px;
+                        border: none;
+                        margin: 20px;
+                        &:hover{
+                            background: rgb(128, 128, 248);
+                            -webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+                            box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.75);
+                            transform: translate(4px);
+                            font-weight: bolder;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .extra{
+        display: none;
+    }
+
+    
+}
+
+

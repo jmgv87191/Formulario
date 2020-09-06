@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0
+    user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Comercial</title>
+    <link rel="stylesheet" href="../css/subdivision/estilos.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/scriptsComercial.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <script src="../js/select2.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/subdivision/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/subdivision/select2.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1 class="titulo">COMERCIAL</h1>
+    </header>
+
+    <section class="main">
+
+        <form action="guardar.php" method="POST">
+
+            <section class="costos">
+            <div class="contenedor">
+                <h1 class="titulo">COSTOS</h1>
+                <div class="datos">
+                    <div class="datos1">
+                        <div class="contenedor2">
+                            <label for="numTramite">#Tramite</label>
+                            <input type="text" class="inputDatos" id="numTramite" readonly>
+                        </div>
+
+                        <div class="contenedor2">
+                            <label for="tipoTramite">Tipo Tramite</label>
+                            <input type="text" class="inputDatos" id="tipoTramite" name="tipoTramite"  value="<COMERC.>" readonly required>
+                        </div>
+                        <div class="contenedor2">
+                            <label for="descripcion">Descripción</label>
+                            <input type="text" class="inputDatos" id="descripcion" name="descripcion" readonly>
+                        </div>
+                    </div>
+                    <div class="datos2">
+                        <div class="contenedor2">
+                            <label for="adicional">$ Adicional</label>
+                            <input type="text" class="inputDatos" id="adicional" name="adicional" value="$ 1,898.05" readonly required>
+                        </div>
+                        <div class="contenedor2">
+                            <label for="costo">Costo</label>
+                            <input type="text" class="inputDatos" id="costo" name="costo" readonly>
+                        </div>
+                        <div class="contenedor2">
+                            <label for="extra"></label>
+                            <input type="text" class="inputDatos" id="extra" readonly>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="contenedorTabla">
+                    <table id="tablaSub" class="tabla" >
+                        <tr id="tr1">
+                            <td></td>
+                            <th>Rango Tramite</th>
+                            <th>Costo Tramite</th>
+                            <th>IVA 16%</th>
+                            <th>Costro Tramite</th>
+                        </tr>
+         
+                        <tr id="tr2">
+                            <td>
+                             
+                                <div>
+                                    <input type="button" class="btn" id="btnCostos1">
+                                </div>
+                            </td>
+                            <td>Locales Comerc.</td>
+                            <td>$254.58</td>
+                            <td> $40.73 </td>
+                            <td>$295.31</td>
+                        </tr>
+        
+                        <tr id="tr3">
+                            <td>
+                                <input type="button" class="btn" id="btnCostos2">
+                            </td>
+                            <td>Deptos.p/Renta</td>
+                            <td>$254.58</td>
+                            <td> $40.73 </td>
+                            <td>$295.31</td>
+                        </tr>
+        
+                        <tr>
+                            <td>
+                                *
+                            </td>
+                            <td>
+                            </td>
+                            <td>$0.00 </td>
+                            <td>$0.00</td>
+                            <td>$0.00</td>
+                        </tr>
+        
+                    </table>
+                </div>
+
+            </div>
+            </section>
+
+            <section class="datosGenerales">
+                <div class="contenedor">
+                
+                    <h1 class="titulo">DATOS GENERALES</h1>
+                
+                    <div class="contenedorDatos">
+                        <div>
+                            <label for="servSol">Servicio Solicitado</label>
+                        </div>
+                        <div>
+                            <input name="servSol" id="servSol" name="servSol" list="servSol2" required>
+                            <datalist id="servSol2">
+                                <option value="Agua Potable"></option>
+                                <option value="Agua Potable y Alcantarillado Sanitario"></option>
+                            </datalist>    
+                            <i class="fas fa-arrow-down"></i>               
+                        </div>
+                        <div>
+                            <label for="claveCat" class="lbccatastral">Clave Catastral</label>
+                        </div>
+                        <div>
+                            <input type="text" name="claveCat" id="claveCat" class="ccatastral"  required >
+                        </div>
+                        <div>
+                            <label for="sector">Sector</label>
+                        </div>
+                        <div>
+                            <input name="sector" id="sector" list="sectorlist" name="sector" style="width: 70px;" >
+                            <datalist id="sectorlist">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            </datalist>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div>
+                            <label for="calle">Calle</label>
+                        </div>
+                        <div>
+                            <input type="text" name="calle" id="calle" required>
+                        </div>
+                        <div>
+                            <label for="colonia">Colonia</label>
+                        </div>
+                        <div>
+                            <select name="colonia" id="mibuscador">
+                                <option value=""></option>
+                               <option value="1">San Juan de la Costa</option>
+                               <option value="2">Col. Agustín Olachea</option>
+                               <option value="3">Lázaro Cárdenas</option>
+                               <option value="4">ALVARO OBREGON</option>
+                               <option value="5">Fidepaz</option>
+                               <option value="6">Sector UABCS</option>
+                               <option value="7">Golfo de California</option>
+                               <option value="8">Predio Villa Esmeralda</option>
+                               <option value="9">FOVISSSTE</option>
+                               <option value="10">Fraccionamiento Punta Lobos</option>
+                               <option value="11">Tuttus</option>
+                               <option value="12">EL Sargento y su anexo a La Ventana</option>
+                               <option value="13">La Pasión</option>
+                               <option value="14">El Comitán</option>
+                               <option value="15">San Marino</option>
+                               <option value="16">Las Pitahayas II</option>
+                               <option value="17">Agua Escondida</option>
+                               <option value="18">Agustín Arriola</option>
+                               <option value="19">Agustín Olachea</option>
+                               <option value="20">Ampl. Agustín Olachea</option>
+                               <option value="21">Albergue Deportivo Indeco</option>
+                               <option value="22">Alfonso Sánchez Madariaga INFONAVIT</option>
+                               <option value="23">Alfredo V. Bonfil</option>
+                               <option value="24">Altamira Residencial</option>
+                               <option value="25">Altezza Residencial</option>
+                               <option value="26">Álvaro Obregón</option>
+                               <option value="27">Antonio Navarro Rubio</option>
+                               <option value="28">Ampl. Antonio Navarro Rubio</option>
+                               <option value="29">Ayuntamiento</option>
+                               <option value="30">Ampl. Ayuntamiento</option>
+                               <option value="31">Marquez de León</option>
+                               <option value="32">Ampl. Marquez de León</option>
+                               <option value="33">Ángel Cesar Mendoza Aramburo</option>
+                               <option value="34">Arbolares</option>
+                               <option value="35">Arcoiris</option>
+                               <option value="36">Arcoiris II</option>
+                               <option value="37">Arcoiris III</option>
+                               <option value="38">Arcos del Sol</option>
+                               <option value="39">Atardeceres</option>
+                               <option value="40">Azaleas</option>
+                               <option value="41">Azul Marino</option>
+                               <option value="42">Balandra</option>
+                               <option value="43">Balandra Puesta del Sol</option>
+                               <option value="44">Ballenas</option>
+                               <option value="45">BANOBRAS</option>
+                               <option value="46">Barrio el Manglito</option>
+                               <option value="47">Baturi</option>
+                               <option value="48">Bella Vista</option>
+                               <option value="49">Bella Vista Plus</option>
+                               <option value="50">Benito Juárez</option>
+                               <option value="51">Benito Juárez Oriente</option>
+                               <option value="52">Boca del Álamo</option>
+                               <option value="53">Boca del Palmarito</option>
+                               <option value="54">Borrego Cimarrón</option>
+                               <option value="55">Brisas de las Olas</option>
+                               <option value="56">Brisas del Pacifico</option>
+                               <option value="57">Buenavista</option>
+                               <option value="58">Buenos Aires</option>
+                               <option value="59">Bugambilias</option>
+                               <option value="60">Burocrática las Garzas</option>
+                               <option value="61">Cácaros</option>
+                               <option value="62">Cactus Harinera</option>
+                               <option value="63">Fracc. Calafia</option>
+                               <option value="64">Calafia</option>
+                               <option value="65">Calandrio</option>
+                               <option value="66">California</option>
+                               <option value="67">Campestre</option>
+                               <option value="68">Capullo</option>
+                               <option value="69">Cardonal</option>
+                               <option value="70">Casa Blanca</option>
+                               <option value="71">CCCC y Perla de La Paz</option>
+                               <option value="72">Centenario</option>
+                               <option value="73">Ampl. Centenario</option>
+                               <option value="74">Centro</option>
+                               <option value="75">Chametla</option>
+                               <option value="76">Cihuatán (Costa Azul)</option>
+                               <option value="77">Ciudad del Cielo</option>
+                               <option value="78">Ciudad del Recreo</option>
+                               <option value="79">Civilizadores I</option>
+                               <option value="80">Civilizadores II</option>
+                               <option value="81">Clemente Guillen</option>
+                               <option value="82">Cola de la Ballena</option>
+                               <option value="83">Colina de la Cruz</option>
+                               <option value="84">Colina del Sol</option>
+                               <option value="85">Comitán</option>
+                               <option value="86">Coromuel</option>
+                               <option value="87">Correcaminos</option>
+                               <option value="88">Cruz de Piedra</option>
+                               <option value="89">Del Mar Residencial</option>
+                               <option value="90">Del Sol</option>
+                               <option value="91">Diana Laura</option>
+                               <option value="92">El Ancón</option>
+                               <option value="93">El Barranco</option>
+                               <option value="94">El Batequito</option>
+                               <option value="95">El Calandrio I</option>
+                               <option value="96">El Calandrio II</option>
+                               <option value="97">El Calandrio III</option>
+                               <option value="98">Camino Real</option>
+                               <option value="99">El Campanario</option>
+                               <option value="100">El Cañón</option>
+                               <option value="101">El Cardoncito</option>
+                               <option value="102">El Carrizal</option>
+                               <option value="103">El Centenario</option>
+                               <option value="104">El Conchalito</option>
+                               <option value="105">El Coro</option>
+                               <option value="106">El Corral Falso</option>
+                               <option value="107">El Dorado</option>
+                               <option value="108">El Encino</option>
+                               <option value="109">El Mezquitito</option>
+                               <option value="110">El Mezquitito INVI</option>
+                               <option value="111">El Palmar</option>
+                               <option value="112">El Palmar I</option>
+                               <option value="113">El Palmar II</option>
+                               <option value="114">El Palmar IV</option>
+                               <option value="115">El Palmarito</option>
+                               <option value="116">El Palmarito II</option>
+                               <option value="117">El Palo Verde</option>
+                               <option value="118">El Pescadero</option>
+                               <option value="119">El Pescador</option>
+                               <option value="120">El Pintado</option>
+                               <option value="121">El Pozo</option>
+                               <option value="122">Ampl. El progreso</option>
+                               <option value="123">El Refugio</option>
+                               <option value="124">El Refugio Sur</option>
+                               <option value="125">El Rio</option>
+                               <option value="126">El Rosario</option>
+                               <option value="127">El Sacrificio</option>
+                               <option value="128">El Salado</option>
+                               <option value="129">El Salto</option>
+                               <option value="130">El Sargento</option>
+                               <option value="131">El Triunfo</option>
+                               <option value="132">El Valle Perdido</option>
+                               <option value="133">El Zacatal</option>
+                               <option value="134">Electricista</option>
+                               <option value="135">Embotelladores 83</option>
+                               <option value="136">Emiliano Zapata</option>
+                               <option value="137">Ensenada de Muertos</option>
+                               <option value="138">Esterito</option>
+                               <option value="139">Estrella</option>
+                               <option value="140">Flores Magón</option>
+                               <option value="141">Fracc. Residencial Agua de la Costa</option>
+                               <option value="142">Francisco Villa</option>
+                               <option value="143">Fuerza Aérea</option>
+                               <option value="144">Garzas Agrícolas</option>
+                               <option value="145">Gral. Juan Dominguez Cota</option>
+                               <option value="146">Guadalupe Victoria</option>
+                               <option value="147">Guaycura</option>
+                               <option value="148">Guerrero</option>
+                               <option value="149">Inalámbrica</option>
+                               <option value="150">Inalapa</option>
+                               <option value="151">Indeco</option>
+                               <option value="152">Col. Independencia</option>
+                               <option value="153">Independencia</option>
+                               <option value="154">INFONAVIT</option>
+                               <option value="152">ISSSTE</option>
+                               <option value="156">Jacinto López</option>
+                               <option value="157">Jardines de La Paz</option>
+                               <option value="158">Jardines del Sur</option>
+                               <option value="159">Ampl. Jardines del Sur</option>
+                               <option value="160">José María Morelos</option>
+                               <option value="161">La Cañada</option>
+                               <option value="162">La Cieneguita</option>
+                               <option value="163">La Cima Residencial</option>
+                               <option value="164">La Cuesta</option>
+                               <option value="165">La Escondida</option>
+                               <option value="166">col. La Esperanza</option>
+                               <option value="167">La Esperanza</option>
+                               <option value="168">La Esperanza II</option>
+                               <option value="169">La Esperanza III</option>
+                               <option value="170">La Estancia</option>
+                               <option value="171">La fortuna</option>
+                               <option value="172">La fuente</option>
+                               <option value="173">La Lagunita</option>
+                               <option value="174">La línea</option>
+                               <option value="175">La Matanza</option>
+                               <option value="176">La Pasón C</option>
+                               <option value="177">La Pitahaya</option>
+                               <option value="178">La Rinconada</option>
+                               <option value="179">La Sirena</option>
+                               <option value="180">La Trinchera</option>
+                               <option value="181">La Trinidad</option>
+                               <option value="182">La Ventana</option>
+                               <option value="183">La Vinatería</option>
+                               <option value="184">La Ladrillera</option>
+                               <option value="185">Laguna Azul</option>
+                               <option value="186">Las 3 Pachitas</option>
+                               <option value="187">Las Águilas</option>
+                               <option value="188">Las Américas</option>
+                               <option value="189">Las Ánimas</option>
+                               <option value="190">Las Arboledas</option>
+                               <option value="191">Las Californias</option>
+                               <option value="192">Col. Las Flores</option>
+                               <option value="193">Las Flores</option>
+                               <option value="194">Las Garzas INFONAVIT</option>
+                               <option value="195">Las Golondrinas</option>
+                               <option value="196">Las Grullas</option>
+                               <option value="197">Las Islas</option>
+                               <option value="198">Las Margaritas</option>
+                               <option value="199">Las Palmas</option>
+                               <option value="200">Las Pocitas</option>
+                               <option value="201">Las Quintas</option>
+                               <option value="202">Las Tinas</option>
+                               <option value="203">Las Tunas</option>
+                               <option value="204">Las Vinoramas</option>
+                               <option value="205">Lázaro Cárdenas</option>
+                               <option value="206">Ampl. Lázaro Cárdenas</option>
+                               <option value="207">Leonardo Rodríguez</option>
+                               <option value="208">Libertad</option>
+                               <option value="209">Lienzo Charro</option>
+                               <option value="210">Loma Linda</option>
+                               <option value="211">Loma Obrera</option>
+                               <option value="212">Lomas de Cataviña</option>
+                               <option value="213">Lomas de Palmira</option>
+                               <option value="214">Los Álamos</option>
+                               <option value="215">Los Algodones</option>
+                               <option value="216">Los Barriles</option>
+                               <option value="217">Los Bledales</option>
+                               <option value="218">Los Cactus</option>
+                               <option value="219">Los Cántaros</option>
+                               <option value="220">Los Cardones</option>
+                               <option value="221">Los Divisaderos</option>
+                               <option value="222">Los Girasoles</option>
+                               <option value="223">Los Olivos</option>
+                               <option value="224">Los Peces</option>
+                               <option value="225">Los Pericues</option>
+                               <option value="226">Los Planes</option>
+                               <option value="227">Los Tabachines</option>
+                               <option value="228">Los Tamales</option>
+                               <option value="229">Magisterial</option>
+                               <option value="230">Manuel Rivera Anaya</option>
+                               <option value="231">María Conchita</option>
+                               <option value="232">Marina Sol</option>
+                               <option value="233">Melitón Albañez</option>
+                               <option value="234">Col. Mezquitito</option>
+                               <option value="235">Ampl. Mezquitito</option>
+                               <option value="236">Fracc. Mezquitito</option>
+                               <option value="237">Miguel Canseco</option>
+                               <option value="238">Mineros (Perla ROFOMEX)</option>
+                               <option value="239">Miramar</option>
+                               <option value="240">Misión las Palmas</option>
+                               <option value="241">Misioneros</option>
+                               <option value="242">Misiones</option>
+                               <option value="243">Misiones de Loreto</option>
+                               <option value="244">Misiones II</option>
+                               <option value="245">Molino Harinero</option>
+                               <option value="246">Molino Harinero II</option>
+                               <option value="247">Nueva Puesta del Sol</option>
+                               <option value="248">Agustín Olachea</option>
+                               <option value="249">Olas Altas</option>
+                               <option value="250">Oro Blanco</option>
+                               <option value="251">Paraíso del Mar</option>
+                               <option value="252">Paraíso del Sol</option>
+                               <option value="253">Parque Industrial</option>
+                               <option value="254">Paseos del Cortes</option>
+                               <option value="255">Fracc. Paseos del Sol</option>
+                               <option value="256">Paseos del Sol</option>
+                               <option value="257">Pedregal de La Paz</option>
+                               <option value="258">Pedregal del Cortes</option>
+                               <option value="259">Península Sur</option>
+                               <option value="260">Perla</option>
+                               <option value="261">Perla del Golfo</option>
+                               <option value="262">Pescadero</option>
+                               <option value="263">Pescadores</option>
+                               <option value="264">Petrolera</option>
+                               <option value="265">Plan Hidráulico</option>
+                               <option value="266">Playa de Santa Rita</option>
+                               <option value="267">Plutarco Elias Calles</option>
+                               <option value="268">Policentro Palmira</option>
+                               <option value="269">Popular Garza V</option>
+                               <option value="270">Popular Indeco</option>
+                               <option value="271">Prensa Radio y TV</option>
+                               <option value="272">Primero de Mayo</option>
+                               <option value="273">Privada las Garzas</option>
+                               <option value="274">Privadas del Sol</option>
+                               <option value="275">Col. El Progreso</option>
+                               <option value="276">Pueblo Nuevo</option>
+                               <option value="277">Publo Nuevo I</option>
+                               <option value="278">Pueblo Nuevo II</option>
+                               <option value="279">Puerto de Pichilingue</option>
+                               <option value="280">Puesta del Sol</option>
+                               <option value="281">Punta Lobos</option>
+                               <option value="282">Punta Pescadero</option>
+                               <option value="283">Quinta Esmeralda</option>
+                               <option value="284">Quinta San Patricio</option>
+                               <option value="285">Real del Sol</option>
+                               <option value="286">Reforma</option>
+                               <option value="287">Reforma I</option>
+                               <option value="288">Reforma II</option>
+                               <option value="289">Residencial las Garzas</option>
+                               <option value="290">Residencial Loreto</option>
+                               <option value="291">Residencial Marina Sur</option>
+                               <option value="292">Residencial Santa Rita</option>
+                               <option value="293">Revolución</option>
+                               <option value="294">Revolución II</option>
+                               <option value="295">Roncón de León</option>
+                               <option value="296">Rinconada el Cardonal</option>
+                               <option value="297">Rinconada las Californias</option>
+                               <option value="298">Rio Blanco</option>
+                               <option value="299">Roma</option>
+                               <option value="300">Rosarito</option>
+                               <option value="301">Rosaura Zapata</option>
+                               <option value="302">San Agustín</option>
+                               <option value="303">San Ángel</option>
+                               <option value="304">San Antpnio</option>
+                               <option value="305">San Antonio el Zacatal</option>
+                               <option value="306">San Bartolo</option>
+                               <option value="307">San Bartolo Sur</option>
+                               <option value="308">San Blas</option>
+                               <option value="309">San Carlos</option>
+                               <option value="310">San Carlos III</option>
+                               <option value="311">San Evaristo</option>
+                               <option value="312">San Fernando</option>
+                               <option value="313">San Hilario</option>
+                               <option value="314">San Ignacio</option>
+                               <option value="315">San Jacinto</option>
+                               <option value="316">San José</option>
+                               <option value="317">San Juan</option>
+                               <option value="318">San Marino</option>
+                               <option value="319">San Martín</option>
+                               <option value="320">San Miguel</option>
+                               <option value="321">San Miguel II</option>
+                               <option value="322">San Pablo</option>
+                               <option value="323">San Pablo Guelatao</option>
+                               <option value="324">San Pedro</option>
+                               <option value="325">San Pedro de la Soledad</option>
+                               <option value="326">San Pedro México</option>
+                               <option value="327">San Quintín</option>
+                               <option value="328">San Rafael</option>
+                               <option value="329">San Ramón</option>
+                               <option value="330">San Simón</option>
+                               <option value="331">San Vicente</option>
+                               <option value="332">Santa Fe</option>
+                               <option value="333">Col. Santa María</option>
+                               <option value="334">Santa María</option>
+                               <option value="335">Santa Martha</option>
+                               <option value="336">Santa Mónica</option>
+                               <option value="337">Santa Rita</option>
+                               <option value="338">Santa Rosa</option>
+                               <option value="339">Sector Inalapa</option>
+                               <option value="340">Sector Santa Rita</option>
+                               <option value="341">Solidaridad</option>
+                               <option value="342">Solidaridad INFONAVIT</option>
+                               <option value="343">Solidaridad Mezquitito I</option>
+                               <option value="344">Solidaridad Mezquitito II</option>
+                               <option value="345">Su Casa</option>
+                               <option value="346">Sudcalifornia</option>
+                               <option value="347">Tecnológico</option>
+                               <option value="348">Terranova</option>
+                               <option value="349">Tulipanes</option>
+                               <option value="350">Unidad Alta</option>
+                               <option value="351">Unidad Domingo Carballo Félix</option>
+                               <option value="352">Unidad Donceles 28</option>
+                               <option value="353">Unidad Indeco</option>
+                               <option value="354">Universitario</option>
+                               <option value="355">Valle de las Vinoramas</option>
+                               <option value="356">Valle del Mezquite</option>
+                               <option value="357">Villa Santa María</option>
+                               <option value="358">Villas de Guadalupe</option>
+                               <option value="359">Villas de La Paz</option>
+                               <option value="360">Villas de San Lorenzo</option>
+                               <option value="361">Villas del Cortes</option>
+                               <option value="362">Villas del Encanto</option>
+                               <option value="363">Villas del Mar</option>
+                               <option value="364">Virreyes</option>
+                               <option value="365">Vista Dorada</option>
+                               <option value="366">Vista Hermosa</option>
+                               <option value="367">VIVAH El Progreso</option>
+                               <option value="368">Zona Antiguo Aeropuerto</option>
+                               <option value="369">Zona Central</option>
+                               <option value="370">Zona Comercial</option>
+                               <option value="371">Zona Industrial</option>
+                               <option value="372">Zona Militar</option>
+                               <option value="373">Todos Santos</option>
+                               <option value="374">El Ancón</option>
+                               <option value="375">San Antonio</option>
+                               <option value="376">San Bartolo</option>
+                               <option value="377">Los Barriles</option>
+                               <option value="378">El Triunfo</option>
+                               <option value="379">Las Pocitas</option>
+                               <option value="380">El Mezquite</option>
+                               <option value="381">La Providencia</option>
+                               <option value="382">San Antonio</option>
+                               <option value="383">San Francisco Lanzer</option>
+                               <option value="384">San Isidro</option>
+                               <option value="385">San José</option>
+                               <option value="386">Santa Victoria</option>
+                               <option value="387">Ejido San Vicente</option>
+                               <option value="388">La Noria</option>
+                               <option value="389">Fraccionamiento La Piedra</option>
+                               <option value="390">Fraccionamiento Coronado</option>
+                               <option value="391">Plutarco Elias Calles</option>
+                               <option value="392">Las Praderas</option>
+                               <option value="393">San Lorenzo</option>
+                               <option value="394">Paraíso del Sol IV</option>
+                               <option value="395">Alfredo V. Bonfil</option>
+                               <option value="396">El aguaje</option>
+                            </select>  
+                           <i class="fas fa-arrow-down"></i>         
+                        </div>
+                        <div>
+                            <label for="descripcionTramite">Descripción del trámite</label>
+                        </div>
+                        <div>
+                            <input type="text" name="descripcionTramite" id="descripcionTramite" placeholder="Trámite requerido para" required >
+                        </div>
+                        <div>
+                            <label for="numEmpleados">Numero de Empleados </label>
+                        </div>
+                        <div>
+                            <input type="text" name="numEmpleados" id="numEmpleados" required>
+                        </div>
+                    
+                        <div>
+                            <label for="supPredio">Superficie del Predio </label>
+                        </div>
+                        <div>
+                            <input type="text" name="supPredio" id="supPredio" required>
+                        </div>
+                    
+                        <div>
+                            <label for="propietario">Propietario </label>
+                        </div>
+                        <div>
+                            <input type="text" name="propietario" id="propietario" required>
+                        </div>
+                        <div>
+                            <label for="telefono">Teléfono</label>
+                        </div>
+                        <div>
+                            <input type="text" name="telefono" id="telefono" required>
+                        </div>
+                        <div>
+                            <label for="repLeg">Representante Legal</label>
+                        </div>
+                        <div>
+                            <input type="text" name="repLeg" id="repLeg" required>
+                        </div>
+                        <div>
+                            <label for="donNot">Domicilio para Notificaciones</label>
+                        </div>
+                        <div>
+                            <input type="text" name="donNot" id="donNot" required>
+                        </div>
+                        <div>
+                            <label for="correo">Correo Electrónico</label>
+                        </div>
+                        <div>
+                            <input type="email" name="correo" id="correo" required>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section class="docRequerida">
+
+            <div class="contenedor">
+                <h1 class="titulo">DOCUMENTACIÓN REQUERIDA</h1>
+
+                <div class="subTitulo">
+
+                    <p>
+                        A.) TODOS LOS DOCUMENTOS serán recibidos de manera digital, deberán estar legibles y enviarse
+                        ESCANEADOS EN ARCHIVO PDF (NO FOTOS) al correo electrónico:
+                        <strong> asdasdasdasd@outlook.com</strong>
+                    </p>
+                    <br>
+                    <p style="text-align: justify;">
+                        B.) <strong>Es importante e indispensable que todos los requisitos seas enviados, sin excepción de alguno
+                        </strong>(inclusive la carta poder si quien solicita no es el propietario del predio), esto es para poder
+                        dar seguimiento de manera regular y dentro de los días que establecemos para dar una respuesta
+                        oportuna, <strong>por lo tanto aquella solicitud que esté incompleta, se quedará en espera de 
+                        seguimiento hasta cumplir con toda la documentación.</strong> 
+                    </p>
+                    <br>
+                    <p>
+                        C.) Los requisitos para realizar el trámite son los siguientes:
+                    </p>
+                </div>
+
+                <div class="docMain">
+
+                    <ol start="1">
+                        <ul>
+                            <li><h2>Locales comerciales:</h2></li>
+                        </ul>
+                        <br>
+
+                        <li><u><strong> Formato de solicitud llenado donde solicita</strong></u> la factibilidad de
+                            servicios.</li>
+                        <br>
+                        <li>Copia de la <strong>identificación oficial del propietario,</strong> si quien realiza el trámite
+                            no es el propietario, deberá enviar también carta poder simple firmada por el propietario
+                            del predio, adjuntando la copia de identificación de quien recibe el poder; en el caso de
+                            empresas presentar copia de la <strong>identificación oficial del representante legal,</strong>
+                            adjuntando
+                            el poder notarial que lo acredite. </li>
+                        <br>
+                        <li>Copia del <u><strong>plano arquitectónico y planta de conjunto del Local
+                            a construir o croquis de distribución del local.
+                        </strong></u></li>
+                        <br>
+                        <li>Memoria de cálculo hidráulico del proyecto.</li>
+                        <br>
+                        <li><u><strong>Croquis de ubicación del predio en Google Earth</strong></u> (No MAPS).</li>
+                        <br>
+    
+                        <li>Acreditación de la propiedad <u><strong>(escrituras completas)</strong></u>.</li>
+                        <br>
+                        <li><strong>Predial</strong> actualizado sin adeudo (desplegado y comprobante de pago).</li>
+                        <br>
+                        <li><strong>Pago del trámite <u>$295.31</u>.</strong></li>
+                        <ul>
+                            <br>
+                            <li>En caso de estar arrendando el predio, deberá anexar a los requisitos anteriores el
+                                <u>contrato de arrendamiento.</u> </li>
+                                <br>
+                            <li>
+                                En caso de ser persona moral, deberá anexar a los requisitos anteriores, el<u> acta
+                                    constitutiva</u> de la empresa y <u>carta poder notarial</u> del representante legal
+                                (en caso de que éste no se estipula en el acta).
+                            </li>
+                        </ul>
+                    </ol>
+                </div>
+
+                <div class="subTitulo">
+                    <p>
+                        D.) <strong>Una vez recibida la documentación completa</strong>, se le enviarán los datos necesarios y pasos a seguir para
+                        <strong> realizar el pago vía transferencia bancaria.</strong>
+                    </p>
+                    <br>
+                    <p>
+                        E.) Verificado el pago con el área correspondiente, se dará seguimiento a su solicitud,
+                        dándole respuesta en aproximadamente de 8 a 10 días.
+                    </p>
+                    <br>
+                    <p>
+                        F.) Se le indicará vía correo electrónico o telefónica el día y horario para recoger su oficio 
+                        de respuesta.
+                    </p>
+                </div>
+
+                <div class="footer">
+                    <p><i><strong>
+                        <i class="fas fa-phone-alt" style="font-size: 20px;">&nbsp</i>
+                        Cualquier duda puede comunicarse al número telefónico:
+                        612 12121212 
+                    </strong></i></p>
+
+                    <div class="botones">
+                        <button id="enviar" type="submit">CONTINUAR</button>
+                        <button id="limpiar" type="reset">LIMPIAR</button>
+                    </div>
+                </div>
+            </div>
+
+
+            </section>
+
+            <div class="extra">
+                <input type="text" name="tipoTramite2" value="3">
+                <input type="text" name="año" id="año"> 
+                <input type="text" name="costo2" id="año">
+            </div>
+
+        </form>
+    </section>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#mibuscador").select2();
+    });
+</script>

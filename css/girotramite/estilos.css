@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #dad9d9;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif; }
+
+body .contenedor {
+  display: grid;
+  width: 100%;
+  max-width: 700px;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: 100px 150px 20px;
+  grid-gap: 10px;
+  background: white;
+  margin: 120px auto;
+  border-radius: 15px;
+  -webkit-box-shadow: -12px 14px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -12px 14px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -12px 14px 5px 0px rgba(0, 0, 0, 0.75); }
+  body .contenedor .header {
+    grid-column: span 3;
+    font-weight: bolder;
+    color: white;
+    background: #1d5a1d;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+    text-align: center; }
+    body .contenedor .header h1 {
+      margin-top: 20px; }
+  body .contenedor .botones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center; }
+    body .contenedor .botones a {
+      text-decoration: none;
+      color: black;
+      display: inline-block;
+      width: 30%;
+      margin-bottom: 10px;
+      padding: 10px;
+      margin-left: 10px;
+      text-align: center; }
+      body .contenedor .botones a:hover {
+        font-weight: bolder;
+        border-radius: 5px;
+        -webkit-box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+        transition: 1s;
+        transform: translate(5px); }
+  body .contenedor .footer {
+    grid-column: span 3; }
+  body .contenedor .img1 .imagenAyuntamiento {
+    margin: 25px auto;
+    width: 90px;
+    height: 90px;
+    background: url(../../img/Aguila.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    margin-right: 10px; }
+  body .contenedor .img2 .imagenSapa {
+    margin: 25px auto;
+    width: 85px;
+    height: 85px;
+    background: url(../../img/SAPA.jpg);
+    background-size: cover;
+    margin-left: 10px; }
+body footer {
+  width: 100%;
+  background: white;
+  text-align: center;
+  padding: 30px;
+  font-weight: bolder;
+  font-size: 11px; }
+
+@media screen and (max-width: 800px) {
+  body .contenedor {
+    height: 350px; }
+    body .contenedor .botones {
+      margin-top: 100px; }
+      body .contenedor .botones a {
+        width: 100%; } }
+
+/*# sourceMappingURL=estilos.css.map */
